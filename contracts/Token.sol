@@ -11,6 +11,7 @@ contract Token {
     mapping(address => uint256) public balanceOf;
     mapping(address => mapping(address => uint256)) public allowance;
     event Transfer(address from, address to, uint256 amount);
+
     event Approval(
         address indexed owner,
         address indexed spender,
@@ -61,4 +62,5 @@ contract Token {
         emit Transfer(_from, _to, _amount);
         return true;
     }
+    
 }
